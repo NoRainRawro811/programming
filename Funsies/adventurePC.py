@@ -30,7 +30,13 @@ def intro():
     print("CONTROLS:")
     print("Type the selection keys for your choices\nBetween text, you must press 'enter' to progress.")
     print("Now, press 'enter' to begin.")
-    input()
+    choice = input()
+    if choice == "":
+        pass
+    elif choice == "dev":
+        devMenu()
+    else:
+        print("Press enter.")
 
 def gender():
     global playerGender
@@ -90,10 +96,10 @@ def nightmare():
     input()
     print("But what will you do?")
     while True:
-        choice = input("Action: ")
         print("1. Approach the light")
         print("2. Run from the light")
         print("3. Stand your ground")
+        choice = input("Action: ")
         if choice == "1":
             playerChoices.append("Nightmare_Approached")
             personality["curiosity"] =+ 2
@@ -127,30 +133,65 @@ def nightmare():
         else:
             pass
 
+
+
+
+def wakeConvoM():
+    if "Nightmare_Approached" in playerChoices:
+        print("You open your eyes to see your friend and roommate stumbling to put his boots on.")
+        input()
+    
+    elif "Nightmare_Ran" in playerChoices:
+        print("You wake up to see your friend/roommate right in your face.")
+        input()
+        print("""Dude, wake up, we're gonna be SO late!""")
+        input()
+    
+    elif "Nightmare_Stood" in playerChoices:
+        print("""Dude, wake the hell up, we're gonna be late!""")
+        input()
+        print("You open your eyes to see your friend and roommate shaking you awake.")
+        input()
+
+
+def wakeConvoF():
+    if "Nightmare_Approached" in playerChoices:
+        print("You open your eyes to see your friend and roommate stumbling to put her boots on.")
+        input()
+
+    elif "Nightmare_Ran" in playerChoices:
+        print("You wake up to the concerned face of your roommate.")
+        input()
+        print("""You were squirming in your sleep, are you alright...?""")
+        input()
+        print("""Oh, right, um, we're gonna be late REALLY soon!""")
+        input()
+
+    elif "Nightmare_Stood" in playerChoices:
+        print("""Wake up, for the love of the gods, we're gonna be late!""")
+        input()
+        print("You wake up to the sight of your friend and roommate giving you a bit of a glare.")
+        input()
+        print("On second thought, they look more or less stressed.")
+
+
+
 def wake01():
     if "Nightmare_Approached" in playerChoices:
         if playerGender == "M":
-            print("You open your eyes to see your friend and roommate stumbling to put his boots on.")
+            wakeConvoM()
         elif playerGender == "F":
-            print("You open your eyes to see your friend and roommate stumbling to put her boots on.")
+            wakeConvoF()
     elif "Nightmare_Ran" in playerChoices:
         if playerGender == "M":
-            print("You wake up to see your friend/roommate right in your face.")
-            input()
-            print("""Dude, wake up, we're gonna be SO late!""")
+            wakeConvoM()
         elif playerGender == "F":
-            print("You wake up to the concerned face of your roommate.")
-            input()
-            print("""You were squirming in your sleep, are you alright...?""")
-            input()
-            print("""Oh, right, um, we're gonna be late REALLY soon!""")
+            wakeConvoF()
     elif "Nightmare_Stood" in playerChoices:
         if playerGender == "M":
-            print("""Dude, wake the hell up, we're gonna be late!""")
-            print("You open your eyes to see your friend and roommate shaking you awake.")
+            wakeConvoM()
         elif playerGender == "F":
-            print("""Wake up, for the love of the gods, we're gonna be late!""")
-            print("You wake up to the sight of your friend and roommate giving you a bit of a glare.")
+            wakeConvoF()
 
 
 
@@ -165,7 +206,29 @@ def main():
 
 
 
-
+def devMenu():
+    line()
+    print("This is the dev menu.")
+    line()
+    playerGender = "F"
+    playerName = "Queen"
+    playerChoices.append("Nightmare_Approached")
+    while True:
+        print("Choose between the following:")
+        print("intro\nname\ngender\nnightmare\nwake01")
+        choice = input("Choose a scene: ")
+        if choice == "intro":
+            intro()
+        elif choice == "name":
+            name()
+        elif choice == "gender":
+            gender()
+        elif choice == "nightmare":
+            nightmare()
+        elif choice == "wake01":
+            wake01()
+        else:
+            print("Not a choice.")
 
 
 
