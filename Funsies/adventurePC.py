@@ -74,6 +74,7 @@ def name():
             break
         else:
             print("Please select Y for Yes and N for No.")
+            continue
     print(playerName)
 
 def test():
@@ -131,15 +132,34 @@ def nightmare():
             input()
             break
         else:
-            pass
+            continue
 
+def getReadyM():
+    pass
 
+def getReadyF():
+    pass
 
 
 def wakeConvoM():
     if "Nightmare_Approached" in playerChoices:
         print("You open your eyes to see your friend and roommate stumbling to put his boots on.")
         input()
+        while True:
+            print("What to do...")
+            print("1. Get up")
+            print("2. Stay in bed because fuck you")
+            print("3. Talk to your roommate")
+            choiceA = input("Type the number: ")
+            if choiceA == "1":
+                print("You decide to get up, dragging yourself out of bed.")
+                input()
+                break
+            elif choiceA == "2":
+                print("Yeah, fuck this. You stay in bed.")
+                input()
+                print( playerName + """, get out of bed. We're gonna be late as is.""")
+                input()
     
     elif "Nightmare_Ran" in playerChoices:
         print("You wake up to see your friend/roommate right in your face.")
@@ -158,6 +178,47 @@ def wakeConvoF():
     if "Nightmare_Approached" in playerChoices:
         print("You open your eyes to see your friend and roommate stumbling to put her boots on.")
         input()
+        while True:
+            print("What are you gonna do?")
+            print("1. Get up")
+            print("2. Stay in bed")
+            print("3. Talk to roomie")
+            choiceA = input("Type the number: ")
+            if choiceA == "1":
+                print("Yeah, you probably should...")
+                input()
+                print("You drag yourself out of bed.")
+                input()
+                getReadyF()
+                break
+            elif choiceA == "2":
+                print("You snuggle up in the covers. You're pretty comfortable anyway.")
+                input()
+                print("You close your eyes, but your comfiness ends abruptly as your blanket gets torn away from you!")
+                input()
+                print("""Oh my gods, wake up and STAY UP, " + playerName + "!""")
+                input()
+                print("Well, I suppose you don't have much of a choice now.")
+                input()
+                print("You choose to get up.")
+                input()
+                getReadyF()
+                break
+            elif choiceA == "3":
+                print("You stir and sit upwards.")
+                input()
+                print("But before you can get a word out, your roommate goes over to you.")
+                input()
+                print("""Oh my gods, get dressed, we're gonna be late to class.""")
+                input()
+                print("Reluctantly, you get ready.")
+                input()
+                getReadyF()
+                break
+            else:
+                print("Please choose a choice out of the selection.")
+                continue
+
 
     elif "Nightmare_Ran" in playerChoices:
         print("You wake up to the concerned face of your roommate.")
