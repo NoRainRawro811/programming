@@ -145,7 +145,12 @@ def wake01():
             input()
             print("""Oh, right, um, we're gonna be late REALLY soon!""")
     elif "Nightmare_Stood" in playerChoices:
-        print("OMG You sleep like a rock.")
+        if playerGender == "M":
+            print("""Dude, wake the hell up, we're gonna be late!""")
+            print("You open your eyes to see your friend and roommate shaking you awake.")
+        elif playerGender == "F":
+            print("""Wake up, for the love of the gods, we're gonna be late!""")
+            print("You wake up to the sight of your friend and roommate giving you a bit of a glare.")
 
 
 
@@ -155,6 +160,7 @@ def main():
     name()
     gender()
     nightmare()
+    wake01()
 
 
 
