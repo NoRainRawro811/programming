@@ -25,6 +25,8 @@ def intro():
             print("And I decided to try porting it to PC when I have time in my Software Engineering class.")
         elif choice == "N":
             break
+        elif choice == "":
+            break
         else:
             print("Type Y for Yes or N for No.")
     print("CONTROLS:")
@@ -109,6 +111,9 @@ def nightmare():
             input()
             print("You reach out your hand...")
             input()
+            print("You hear something rustling...")
+            input()
+            print("The light grows brighter until...")
             break
         elif choice == "2":
             playerChoices.append("Nightmare_Ran")
@@ -156,15 +161,15 @@ def wakeConvoM():
                 input()
                 break
             elif choiceA == "2":
-                print("Yeah, fuck this. You stay in bed.")
+                print("Yeah, screw this. You stay in bed.")
                 input()
-                print( playerName + """, get out of bed. We're gonna be late as is.""")
+                print("\"" + playerName + ", get out of bed. We're gonna be late as is.\"")
                 input()
     
     elif "Nightmare_Ran" in playerChoices:
         print("You wake up to see your friend/roommate right in your face.")
         input()
-        print("""Dude, wake up, we're gonna be SO late!""")
+        print("\"Dude, wake up, we're gonna be SO late!\"")
         input()
     
     elif "Nightmare_Stood" in playerChoices:
@@ -196,7 +201,7 @@ def wakeConvoF():
                 input()
                 print("You close your eyes, but your comfiness ends abruptly as your blanket gets torn away from you!")
                 input()
-                print("""Oh my gods, wake up and STAY UP, " + playerName + "!""")
+                print("\"Oh my gods, wake up and STAY UP, " + playerName + "!\"")
                 input()
                 print("Well, I suppose you don't have much of a choice now.")
                 input()
@@ -209,7 +214,7 @@ def wakeConvoF():
                 input()
                 print("But before you can get a word out, your roommate goes over to you.")
                 input()
-                print("""Oh my gods, get dressed, we're gonna be late to class.""")
+                print("\"Oh my gods, get dressed, we're gonna be late to class.\"")
                 input()
                 print("Reluctantly, you get ready.")
                 input()
@@ -271,6 +276,7 @@ def devMenu():
     line()
     print("This is the dev menu.")
     line()
+    print("A bit broken.")
     playerGender = "F"
     playerName = "Queen"
     playerChoices.append("Nightmare_Approached")
