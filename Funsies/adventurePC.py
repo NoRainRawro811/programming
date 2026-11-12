@@ -10,7 +10,8 @@ personality = {
     "caution": 0, # Preference for safety 
     "compassion": 0, # Willingness to help others 
     "cruelty": 0, # Selfishness or malicious intent 
-    "certainty": 0 # Confidence in one's decisions 
+    "certainty": 0, # Confidence in one's decisions 
+    "laziness": 0 # Unwillingness to put forth effort 
 }
 
 def intro():
@@ -143,7 +144,9 @@ def getReadyM():
     pass
 
 def getReadyF():
-    pass
+    print("You start to get ready.")
+    input() 
+    print("You find to ")
 
 
 def wakeConvoM():
@@ -157,14 +160,23 @@ def wakeConvoM():
             print("3. Talk to your roommate")
             choiceA = input("Type the number: ")
             if choiceA == "1":
+                personality["certainty"] += 1
                 print("You decide to get up, dragging yourself out of bed.")
                 input()
                 break
             elif choiceA == "2":
+                personality["laziness"]
                 print("Yeah, screw this. You stay in bed.")
                 input()
                 print("\"" + playerName + ", get out of bed. We're gonna be late as is.\"")
                 input()
+            elif choiceA == "3":
+                personality["compassion"] += 1
+                print("TBA")
+                continue
+            else:
+                print("Choose.")
+                continue
     
     elif "Nightmare_Ran" in playerChoices:
         print("You wake up to see your friend/roommate right in your face.")
@@ -190,6 +202,7 @@ def wakeConvoF():
             print("3. Talk to roomie")
             choiceA = input("Type the number: ")
             if choiceA == "1":
+                personality["certainty"] += 1
                 print("Yeah, you probably should...")
                 input()
                 print("You drag yourself out of bed.")
@@ -197,6 +210,7 @@ def wakeConvoF():
                 getReadyF()
                 break
             elif choiceA == "2":
+                personality["laziness"] += 1
                 print("You snuggle up in the covers. You're pretty comfortable anyway.")
                 input()
                 print("You close your eyes, but your comfiness ends abruptly as your blanket gets torn away from you!")
@@ -210,6 +224,7 @@ def wakeConvoF():
                 getReadyF()
                 break
             elif choiceA == "3":
+                personality["compassion"] += 1
                 print("You stir and sit upwards.")
                 input()
                 print("But before you can get a word out, your roommate goes over to you.")
@@ -228,13 +243,13 @@ def wakeConvoF():
     elif "Nightmare_Ran" in playerChoices:
         print("You wake up to the concerned face of your roommate.")
         input()
-        print("""You were squirming in your sleep, are you alright...?""")
+        print("\"You were squirming in your sleep, are you alright...?\"")
         input()
-        print("""Oh, right, um, we're gonna be late REALLY soon!""")
+        print("\"Oh, right, um, we're gonna be late REALLY soon!\"")
         input()
 
     elif "Nightmare_Stood" in playerChoices:
-        print("""Wake up, for the love of the gods, we're gonna be late!""")
+        print("\"Wake up, for the love of the gods, we're gonna be late!\"")
         input()
         print("You wake up to the sight of your friend and roommate giving you a bit of a glare.")
         input()
