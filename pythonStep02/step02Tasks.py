@@ -30,12 +30,13 @@ def taskA():
     print(f"Total cost: ${totalCost:.2f}")
     print(f"Cost Per Person: ${costPerPerson:.2f}")
 
+
 def taskB():
-    pass
+    print("Sorry, it seems like this task, um, literally doesn't exist in my teacher's repository, so I cannot complete it.")
 
 
 def taskC():
-    pass
+    print("Sorry, it seems like this task, um, literally doesn't exist in my teacher's repository, so I cannot complete it.")
 
 
 
