@@ -1,6 +1,0 @@
-funniFunctionsToNeverCall.py
-pyproject.toml
-funsies.egg-info/PKG-INFO
-funsies.egg-info/SOURCES.txt
-funsies.egg-info/dependency_links.txt
-funsies.egg-info/top_level.txt
