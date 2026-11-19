@@ -27,7 +27,7 @@ affirmations = [
     f"Don't worry, everything is going to be okay, beautiful.",
     f"I love your name, {name}.",
     f"You're one in 8 billion, {name}.",
-    f"There's something special abput you, {name}"
+    f"There's something special about you, {name}"
 ]
 
 line()

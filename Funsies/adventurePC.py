@@ -106,8 +106,8 @@ def nightmare():
         choice = input("Action: ")
         if choice == "1":
             playerChoices.append("Nightmare_Approached")
-            personality["curiosity"] =+ 2
-            personality["bravery"] =+ 1
+            personality["curiosity"] += 2
+            personality["bravery"] += 1
             print("You approach the light...")
             input()
             print("You reach out your hand...")
@@ -118,7 +118,7 @@ def nightmare():
             break
         elif choice == "2":
             playerChoices.append("Nightmare_Ran")
-            personality["caution"] =+ 1
+            personality["caution"] += 1
             print("Aw, hell no. You run away from that!")
             input()
             print("But as you run into the abyss, you hear a voice...")
@@ -128,8 +128,8 @@ def nightmare():
             break
         elif choice == "3":
             playerChoices.append("Nightmare_Stood")
-            personality["defiance"] =+ 1
-            personality["certainty"] =+ 2
+            personality["defiance"] += 1
+            personality["certainty"] += 2
             print("You stand your ground, looking that light right up.")
             input()
             print("But you hear something...")
