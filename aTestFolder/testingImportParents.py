@@ -6,3 +6,7 @@ sys.path.append(str(Funsies))
 from funniFunctionsToNeverCall import amHateSpeech # type: ignore
 
 amHateSpeech()
+
+from Funsies.gradeCheckStuff.gradeCheck import testGradeCheck
+
+testGradeCheck()

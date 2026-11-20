@@ -5,6 +5,8 @@ Funsies/affirmations.py
 Funsies/affirmations2.py
 Funsies/functioning/__init__.py
 Funsies/functioning/funniFunctionsToNeverCall.py
+Funsies/gradeCheck/__init__.py
+Funsies/gradeCheck/gradeCheck.py
 funsies.egg-info/PKG-INFO
 funsies.egg-info/SOURCES.txt
 funsies.egg-info/dependency_links.txt
