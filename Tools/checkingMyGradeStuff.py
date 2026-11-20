@@ -1,5 +1,5 @@
 from Funsies.gradeCheckStuff.gradeCheck import testGradeCheck
-
+from Funsies.gradeCheckStuff.gpaCheck import gpa
 
 
 def main():
@@ -11,6 +11,10 @@ def main():
         choice = input("Put the number: ")
         if choice == "1":
             testGradeCheck()
+            break
+        elif choice == "2":
+            gpa()
+            break
 
 
 
