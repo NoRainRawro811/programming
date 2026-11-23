@@ -298,7 +298,7 @@ def devMenu():
     while True:
         print("Choose between the following:")
         print("intro\nname\ngender\nnightmare\nwake01")
-        choice = input("Choose a scene: ")
+        choice = input("Choose a scene: ").strip().lower()
         if choice == "intro":
             intro()
         elif choice == "name":
