@@ -1,6 +1,6 @@
 from Funsies.gradeCheckStuff.gradeCheck import testGradeCheck
 from Funsies.gradeCheckStuff.gpaCheck import gpa
-
+from Funsies.functioning.funniFunctionsToNeverCall import error
 
 def main():
     while True:
@@ -15,6 +15,10 @@ def main():
         elif choice == "2":
             gpa()
             break
+        elif choice == "3":
+            break
+        else: 
+            error()
 
 
 

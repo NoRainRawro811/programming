@@ -16,3 +16,5 @@ def dontSayIt():
     print("Did you just say Grandma Brownie's Chocolate Chunker Wonker Bunkers now with" \
     " even bigger chunks of chocolate chunks?")
 
+def error():
+    print("If you're reading this, one of us messed something up.")
