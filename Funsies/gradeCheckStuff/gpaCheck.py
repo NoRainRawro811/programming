@@ -81,5 +81,3 @@ def gpa():
 
     gpa = totalQualityPoints / totalCredits
     print(f"\nYour final GPA is: {round(gpa, 2)}")
-
-gpa()

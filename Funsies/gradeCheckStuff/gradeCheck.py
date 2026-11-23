@@ -73,5 +73,4 @@ def testGradeCheck():
         gpa = 0.0
         vowLetGrade()
 
-testGradeCheck()
 
