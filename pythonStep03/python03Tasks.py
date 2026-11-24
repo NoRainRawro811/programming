@@ -192,7 +192,7 @@ def task11():
 
 def main():
     while True:
-        print("Which task would you like?")
+        print("Which problem would you like?")
         print("1. Problem 1")
         print("2. Problem 2")
         print("3. Problem 3")
